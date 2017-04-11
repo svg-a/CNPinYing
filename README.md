@@ -18,13 +18,16 @@
 
 ##转成模型，或者直接排序
 
+
      for (NSDictionary * dict in array) {
        [arr addObject: [CNPinYingModel initWithDict:dict]];
-     }
+      }
+     
     //数据排列
     dataArray = [CNPinYing PinYingData:arr];
     
     //获得名字首字母大写  
+    
     sectionArray = [CNPinYing PinYingSection:[dataArray mutableCopy]];
     
     
