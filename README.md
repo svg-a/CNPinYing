@@ -19,9 +19,10 @@
 ##转成模型，或者直接排序
 
 
-     for (NSDictionary * dict in array) {
+     for (NSDictionary * dict in array) 
+     {
        [arr addObject: [CNPinYingModel initWithDict:dict]];
-      }
+     }
      
     //数据排列
     dataArray = [CNPinYing PinYingData:arr];
