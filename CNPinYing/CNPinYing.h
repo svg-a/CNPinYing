@@ -7,6 +7,10 @@
 //  LOL（艾欧尼亚：ID：小时候喜欢喝奶）求带，我只是个黄铜的菜鸟，代码很简单，你们也可以自己扩展～，不懂的问我
 
 #import <Foundation/Foundation.h>
+#import "CNPinYingModel.h"//自己的模型
+
+#define PinYingModel CNPinYingModel
+#define PinYingName name
 
 @interface CNPinYing : NSObject
 

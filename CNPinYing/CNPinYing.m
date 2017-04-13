@@ -7,7 +7,7 @@
 //
 
 #import "CNPinYing.h"
-#import "CNPinYingModel.h"//自己的模型
+
 
 @implementation CNPinYing
 
@@ -16,8 +16,8 @@
     NSMutableArray *ans = [[NSMutableArray alloc] init];
     NSArray *serializeArray = [array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         
-        NSString *strA = [self transform:((CNPinYingModel *)obj1).name];
-        NSString *strB = [self transform:((CNPinYingModel *)obj2).name];
+        NSString *strA = [self transform:((PinYingModel *)obj1).PinYingName];
+        NSString *strB = [self transform:((PinYingModel *)obj2).PinYingName];
         if (NSOrderedDescending==[strA compare:strB])
         {
             return (NSComparisonResult)NSOrderedDescending;
@@ -33,8 +33,8 @@
     char lastC = '1';
     NSMutableArray *data;
     NSMutableArray *oth = [[NSMutableArray alloc] init];
-    for (CNPinYingModel *PinYing in serializeArray) {
-        char c = [[self transform:PinYing.name]  characterAtIndex:0];
+    for (PinYingModel *PinYing in serializeArray) {
+        char c = [[self transform:PinYing.PinYingName]  characterAtIndex:0];
         
         if (!isalpha(c)) {
             [oth addObject:PinYing];
@@ -68,8 +68,8 @@
     NSMutableArray *section = [[NSMutableArray alloc] init];
     
     for (NSArray *item in array) {
-        CNPinYingModel *PinYing = [item objectAtIndex:0];
-        char c = [[self transform:PinYing.name] characterAtIndex:0];
+        PinYingModel *PinYing = [item objectAtIndex:0];
+        char c = [[self transform:PinYing.PinYingName] characterAtIndex:0];
         
         if (!isalpha(c)) {
             c = '#';
