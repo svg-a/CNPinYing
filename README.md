@@ -29,26 +29,25 @@
     sectionArray = [CNPinYing PinYingSection:[dataArray mutableCopy]];
 ```
 ## 模型中:.h
-
+```
     #import <Foundation/Foundation.h>
     @interface CNPinYingModel : NSObject
-
     //例如这个是一个名字，这是需要我们排序的
     @property(nonatomic , strong)NSString * name;
     @property(nonatomic , strong)NSString * title;
     @property(nonatomic , strong)NSString * headUrl;
     + (instancetype)initWithDict:(NSDictionary *)dict;
     @end
-
+```
 ## .m
-
+```
     + (instancetype)initWithDict:(NSDictionary *)dict
     {
      CNPinYingModel * PinYingModel = [[CNPinYingModel alloc]init];
     [PinYingModel setValuesForKeysWithDictionary:dict];
     return PinYingModel;
        }
-
-## !(CNPinYing中需要把模型的名字传入)
+```
+## ![CNPinYing中需要把模型的名字传入]()
 
 
