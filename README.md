@@ -1,10 +1,7 @@
-##CNPinYing
+## 对模型或者数组进行排序
 
-##对模型或者数组进行排序
-
-##使用：
-
-//得到一个数组或者字典
+>使用：
+``` 得到一个数组或者字典
 
     NSMutableArray * arr = [NSMutableArray array];
     NSArray * array = @[@{@"name":@"啊啊aa",@"title":@"biaoti1",@"headUrl":@"https1"},
@@ -15,10 +12,10 @@
                         @{@"name":@"🐂###",@"title":@"biaoti6",@"headUrl":@"https6"},
                         @{@"name":@"㊙️mmm",@"title":@"biaoti6",@"headUrl":@"https7"}];
 
+``` 
+## 转成模型，或者直接排序
 
-##转成模型，或者直接排序
-
-
+``` 
      for (NSDictionary * dict in array) 
      {
        [arr addObject: [CNPinYingModel initWithDict:dict]];
@@ -30,9 +27,8 @@
     //获得名字首字母大写  
     
     sectionArray = [CNPinYing PinYingSection:[dataArray mutableCopy]];
-    
-    
-##模型中：.h
+```
+## 模型中:.h
 
     #import <Foundation/Foundation.h>
     @interface CNPinYingModel : NSObject
@@ -44,7 +40,7 @@
     + (instancetype)initWithDict:(NSDictionary *)dict;
     @end
 
-.m
+## .m
 
     + (instancetype)initWithDict:(NSDictionary *)dict
     {
@@ -53,8 +49,6 @@
     return PinYingModel;
        }
 
-##CNPinYing中需要把模型的名字传入
-
-##菜鸟一枚，东西写的不好
+## !(CNPinYing中需要把模型的名字传入)
 
 
